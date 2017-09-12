@@ -108,3 +108,11 @@ export function getMainImage(img) {
   else if (Object.prototype.hasOwnProperty.call(img, 'url')) return img.url;
   return '';
 }
+
+const format = require('d3-format');
+
+const commaFormatter = format.format(',');
+
+export function commaify(str) {
+  return commaFormatter(str);
+}

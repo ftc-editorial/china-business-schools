@@ -16,7 +16,7 @@ export default async () => {
 
     data = res.data;
 
-    console.log(data);
+    // console.log(data);
   } catch (e) {
     console.log('Error getting content from Bertha', e);
   }

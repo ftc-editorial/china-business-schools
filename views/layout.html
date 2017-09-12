@@ -42,6 +42,41 @@
                 </div>
               </div>
             </div>
+            <div class="o-grid-row">
+              <div data-o-grid-colspan="12">
+                <table class="o-table o-table--row-stripes o-table--compact" data-o-component="o-table">
+                  <thead>
+                  <caption class="o-table__caption--top">
+                      Business schools in mainland China
+                    </caption>
+                    <tr>
+                      <th>School</th>
+                      <th>Programme</th>
+                      <th>Category</th>
+                      <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Tuition fee (CNY)</th>
+                      <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Enrolled students</th>
+                      <th data-o-table-data-type="numeric" class="o-table__cell--numeric">International students (%)</th>
+                      <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Female students (%)</th>
+                      <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Starting salary ($US)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for row in data %}
+                      <tr>
+                        <td>{{ row.school }}</td>
+                        <td><a href="{{row.hyperlinks}}">{{ row.programme }}</a></td>
+                        <td>{{ row.category }}</td>
+                        <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.tuitionfeecny | commaify }}</td>
+                        <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.studentnumber }}</td>
+                        <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.internationalstudents }}</td>
+                        <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.femalestudents }}</td>
+                        <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.startingsalaryus }}</td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
 
           <footer class="o-typography-footer" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
