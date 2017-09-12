@@ -61,17 +61,18 @@ export default () => ({ // eslint-disable-line
   */
   twitterCard: 'summary',
 
-  /*
-  TODO: Do you want to tweak any of the
-        optional social meta data?
-  */
-  // General social
-  // socialImage: '',
-  // socialHeadline: '',
-  // socialDescription: '',
-  // twitterCreator: '@author's_account', // shows up in summary_large_image cards
-
-  // TWEET BUTTON CUSTOM TEXT
+ //  /*
+ //  TODO: Do you want to tweak any of the
+ //        optional social meta data?
+ //
+ // General social
+ //  // socialImage: 'https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2Fc4bf0be4-7c15-11e4-a7b8-00144feabdc0?source=ig&fit=scale-down&width=700',
+ //  // socialHeadline: 'Headline',
+ //  // socialDescription: 'description',
+ //  // twitterCreator: '@someone', // shows up in summary_large_image cards
+ //
+ //  */
+  // TWEET BUTTON CΩUSTOM TEXT
   // tweetText: '',
   //
   // Twitter lists these as suggested accounts to follow after a user tweets (do not include @)
