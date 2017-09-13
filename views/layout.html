@@ -44,7 +44,7 @@
             </div>
             <div class="o-grid-row">
               <div data-o-grid-colspan="12">
-                <table class="o-table o-table--row-stripes o-table--compact" data-o-component="o-table">
+                <table class="o-table o-table--row-stripes o-table-responsive-scroll o-table--compact" data-o-component="o-table">
                   <caption class="o-table__caption--top">
                     Business schools in mainland China
                   </caption>
@@ -52,23 +52,23 @@
                     <th>School</th>
                     <th>Programme</th>
                     <th>Category</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Tuition fee (CNY)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Tuition fee <span class="o-table__cell--content-secondary">(CNY)</span></th>
                     <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Enrolled students</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">International students (%)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Female students (%)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Starting salary ($US)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">International students <span class="o-table__cell--content-secondary">(%)</span></th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Female students <span class="o-table__cell--content-secondary">(%)</span></th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Starting salary <span class="o-table__cell--content-secondary">($US)</span></th>
                   </thead>
                   <tbody>
                     {% for row in data %}
                       <tr>
                         <td>{{ row.school }}</td>
-                        <td><a href="{{row.hyperlinks}}">{{ row.programme }}</a></td>
+                        <td><a href="{{row.hyperlinks}}" target="_blank">{{ row.programme }}</a></td>
                         <td>{{ row.category }}</td>
                         <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.tuitionfeecny | commaify }}</td>
                         <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.studentnumber }}</td>
                         <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.internationalstudents }}</td>
                         <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.femalestudents }}</td>
-                        <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.startingsalaryus }}</td>
+                        <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.startingsalaryus | commaify }}</td>
                       </tr>
                     {% endfor %}
                   </tbody>
