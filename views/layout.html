@@ -44,7 +44,7 @@
             </div>
             <div class="o-grid-row">
               <div data-o-grid-colspan="12">
-                <table class="o-table o-table-responsive-scroll o-table--compact" data-o-component="o-table">
+                <table class="o-table o-table--row-stripes o-table-responsive-scroll o-table--compact" data-o-component="o-table">
                   <caption class="o-table__caption--top">
                     Business schools in mainland China
                   </caption>
@@ -59,12 +59,9 @@
                     <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Starting salary <span class="o-table__cell--content-secondary">($US)</span></th>
                   </thead>
                   <tbody>
-                    {% for school, rows in data | groupby("school") %}
-                    <tr>
-                      <td rowspan="{{ rows | length + 1 }}">
-                        {{ school }}
-                      {% for row in rows %}
+                    {% for row in data %}
                       <tr>
+                        <td>{{ row.school }}</td>
                         <td><a href="{{row.hyperlinks}}" target="_blank">{{ row.programme }}</a></td>
                         <td>{{ row.category }}</td>
                         <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.tuitionfeecny | commaify }}</td>
@@ -73,9 +70,6 @@
                         <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.femalestudents }}</td>
                         <td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{ row.startingsalaryus | commaify }}</td>
                       </tr>
-                      {% endfor %}
-                      </td>
-                    </tr>
                     {% endfor %}
                   </tbody>
                 </table>
