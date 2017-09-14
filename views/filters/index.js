@@ -116,3 +116,10 @@ const commaFormatter = format.format(',');
 export function commaify(str) {
   return commaFormatter(str);
 }
+
+export function dashify(str) {
+  // const dashified = str || '-';
+  const dashified = str === null ? '-' : str;
+
+  return dashified;
+}
