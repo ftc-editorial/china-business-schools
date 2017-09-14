@@ -109,16 +109,18 @@ export function getMainImage(img) {
   return '';
 }
 
+export function dashify(str) {
+  const dashified = str === null ? '-' : str;
+
+  return dashified;
+}
+
 const format = require('d3-format');
 
 const commaFormatter = format.format(',');
 
 export function commaify(str) {
-  return commaFormatter(str);
-}
+  const commaified = str === '-' ? str : commaFormatter(str);
 
-export function dashify(str) {
-  const dashified = str === null ? '-' : str;
-
-  return dashified;
+  return commaified;
 }
