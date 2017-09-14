@@ -14,7 +14,7 @@ export default () => ({ // eslint-disable-line
   headline: 'Politics and the English Language',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: 'Political language is designed to make lies sound truthful' +
+  summary: 'Political language is designed to make lies sound truthful ' +
            'and murder respectable, and to give an appearance of solidity to pure wind',
 
   topic: {
@@ -42,8 +42,7 @@ export default () => ({ // eslint-disable-line
   // Byline can by a plain string, markdown, or array of authors
   // if array of authors, url is optional
   byline: [
-    { name: 'Author One', url: '/foo/bar' },
-    { name: 'Author Two' },
+    { name: 'Patrica Nilsson', url: 'https://www.ft.com/stream/4b347066-9e59-385e-a7a4-f7f225b58154' },
   ],
 
   // Appears in the HTML <title>

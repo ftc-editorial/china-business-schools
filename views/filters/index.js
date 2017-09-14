@@ -118,7 +118,6 @@ export function commaify(str) {
 }
 
 export function dashify(str) {
-  // const dashified = str || '-';
   const dashified = str === null ? '-' : str;
 
   return dashified;
