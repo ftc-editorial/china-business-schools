@@ -43,6 +43,7 @@ export default () => ({ // eslint-disable-line
   // if array of authors, url is optional
   byline: [
     { name: 'Patricia Nilsson', url: 'https://www.ft.com/stream/4b347066-9e59-385e-a7a4-f7f225b58154' },
+    { name: 'David Blood', url: 'https://www.ft.com/david-blood' },
   ],
 
   // Appears in the HTML <title>
