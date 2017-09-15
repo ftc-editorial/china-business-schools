@@ -8,15 +8,21 @@ export default async () => {
   const flags = await getFlags();
   const onwardJourney = await getOnwardJourney();
   const berthaId = '1caGngmG0spk3fYgtfX-LTjaIivHEVgjIinWupr_bhN4';
-  const endpoint = `http://bertha.ig.ft.com/view/publish/gss/${berthaId}/china`;
-  let data;
+  const endpointChina = `http://bertha.ig.ft.com/view/publish/gss/${berthaId}/china`;
+  const endpointHk = `http://bertha.ig.ft.com/view/publish/gss/${berthaId}/hong-kong`;
+  const endpointTaiwan = `http://bertha.ig.ft.com/view/publish/gss/${berthaId}/taiwan`;
+  let dataChina;
+  let dataHk;
+  let dataTaiwan;
 
   try {
-    const res = await axios(endpoint);
+    const resChina = await axios(endpointChina);
+    const resHk = await axios(endpointHk);
+    const resTaiwan = await axios(endpointTaiwan);
 
-    data = res.data;
-
-    // console.log(data);
+    dataChina = resChina.data;
+    dataHk = resHk.data;
+    dataTaiwan = resTaiwan.data;
   } catch (e) {
     console.log('Error getting content from Bertha', e);
   }
@@ -25,6 +31,8 @@ export default async () => {
     ...d,
     flags,
     onwardJourney,
-    data,
+    dataChina,
+    dataHk,
+    dataTaiwan,
   };
 };
