@@ -1,21 +1,20 @@
 export default () => ({ // eslint-disable-line
 
   // link file UUID
-  id: '$uuid',
+  id: '4cb88d88-8814-11e7-bf50-e1c239b45787',
 
   // canonical URL of the published page
   // "$url" get filled in by the ./configure script
-  url: '$url',
+  url: 'https://ig.ft.com/chinese-business-schools',
 
   // To set an exact publish date do this:
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: new Date(),
 
-  headline: 'Politics and the English Language',
+  headline: 'Listing of Chinese business schools',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: 'Political language is designed to make lies sound truthful ' +
-           'and murder respectable, and to give an appearance of solidity to pure wind',
+  summary: 'Find out more about the business schools educating the region’s leaders of tomorrow',
 
   topic: {
     name: 'Starter Kit',
@@ -66,9 +65,9 @@ export default () => ({ // eslint-disable-line
  //        optional social meta data?
  //
  // General social
- //  // socialImage: 'https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2Fc4bf0be4-7c15-11e4-a7b8-00144feabdc0?source=ig&fit=scale-down&width=700',
- //  // socialHeadline: 'Headline',
- //  // socialDescription: 'description',
+  socialImage: 'https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2Fc4bf0be4-7c15-11e4-a7b8-00144feabdc0?source=ig&fit=scale-down&width=700',
+  socialHeadline: 'Listing of Chinese business schools',
+  socialDescription: 'Are you interested in the future of Chinese economies? Find out more about the business schools educating the region’s leaders of tomorrow.',
  //  // twitterCreator: '@someone', // shows up in summary_large_image cards
  //
  //  */
