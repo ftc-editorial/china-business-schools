@@ -11,19 +11,19 @@ export default () => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: new Date(),
 
-  headline: 'Listing of Chinese business schools',
+  headline: 'Business schools in China, Hong Kong and Taiwan',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: 'Find out more about the business schools educating the region’s leaders of tomorrow',
+  summary: 'Compare starting salaries and other important data supplied by top schools in the region',
 
   topic: {
-    name: 'Starter Kit',
+    name: 'Educating the next Chinese business leaders',
     url: '/foo',
   },
 
   relatedArticle: {
     text: 'Related article »',
-    url: 'https://en.wikipedia.org/wiki/Politics_and_the_English_Language',
+    url: 'https://www.ft.com/content/1451d662-5da7-11e7-b553-e2df1b0c3220',
   },
 
   mainImage: {
@@ -32,7 +32,7 @@ export default () => ({ // eslint-disable-line
     credit: '',
 
     // You can provide a UUID to an image and it was populate everything else
-    uuid: 'c4bf0be4-7c15-11e4-a7b8-00144feabdc0',
+    uuid: '25439648-9e27-11e7-8cd4-932067fbf946',
 
     // You can also provide a URL
     // url: 'https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2Fc4bf0be4-7c15-11e4-a7b8-00144feabdc0?source=ig&fit=scale-down&width=700',

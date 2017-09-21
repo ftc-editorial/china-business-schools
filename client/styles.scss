@@ -13,7 +13,19 @@
 }
 
 .o-table {
+  margin-bottom: 28px;
+
   a {
     border-bottom: none;
+  }
+
+  .o-table__cell--numeric {
+    -webkit-font-feature-settings: 'tnum';
+    -moz-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+  }
+
+  strong {
+    font-weight: 600;
   }
 }
