@@ -110,7 +110,7 @@ export function getMainImage(img) {
 }
 
 export function dashify(str) {
-  const dashified = str === null ? '-' : str;
+  const dashified = str === null ? '' : str;
 
   return dashified;
 }
@@ -120,7 +120,7 @@ const format = require('d3-format');
 const commaFormatter = format.format(',');
 
 export function commaify(str) {
-  const commaified = str === '-' ? str : commaFormatter(str);
+  const commaified = str === '' ? str : commaFormatter(str);
 
   return commaified;
 }
