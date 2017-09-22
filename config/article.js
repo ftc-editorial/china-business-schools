@@ -18,7 +18,7 @@ export default () => ({ // eslint-disable-line
 
   topic: {
     name: 'Educating the next Chinese business leaders',
-    url: '/foo',
+    url: 'http://www.ft.com/reports/educating-next-chinese-business-leaders',
   },
 
   relatedArticle: {
@@ -29,7 +29,7 @@ export default () => ({ // eslint-disable-line
   mainImage: {
     title: '',
     description: '',
-    credit: '',
+    credit: 'FT graphic: Kari-Ruth Pedersen',
 
     // You can provide a UUID to an image and it was populate everything else
     uuid: '25439648-9e27-11e7-8cd4-932067fbf946',

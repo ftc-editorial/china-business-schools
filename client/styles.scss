@@ -2,18 +2,12 @@
 @import 'o-grid/main';
 @import 'components/core/main';
 
-.o-table__caption--top {
-  display: none;
-}
-
-@include oGridRespondTo(S) {
-  .o-table__caption--top {
-    display: table-caption;
-  }
-}
-
 .o-table {
   margin-bottom: 28px;
+
+  .o-table__caption--top {
+    display: none;
+  }
 
   a {
     border-bottom: none;
@@ -27,5 +21,17 @@
 
   strong {
     font-weight: 600;
+  }
+}
+
+.graphic {
+  margin: 0 0 28px 0;
+}
+
+@include oGridRespondTo(S) {
+  .o-table {
+    .o-table__caption--top {
+      display: table-caption;
+    }
   }
 }
