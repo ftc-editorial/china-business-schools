@@ -46,10 +46,10 @@ export default () => ({ // eslint-disable-line
   ],
 
   // Appears in the HTML <title>
-  title: '',
+  title: 'Business schools in China, Hong Kong and Taiwan',
 
   // meta data
-  description: '',
+  description: 'Compare starting salaries and other important data supplied by top schools in the region',
 
   /*
   TODO: Select Twitter card type -
@@ -65,7 +65,7 @@ export default () => ({ // eslint-disable-line
  //        optional social meta data?
  //
  // General social
-  socialImage: 'https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2Fc4bf0be4-7c15-11e4-a7b8-00144feabdc0?source=ig&fit=scale-down&width=700',
+  socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A25439648-9e27-11e7-8cd4-932067fbf946?source=ig&width=1400',
   socialHeadline: 'Listing of Chinese business schools',
   socialDescription: 'Are you interested in the future of Chinese economies? Find out more about the business schools educating the region’s leaders of tomorrow.',
  //  // twitterCreator: '@someone', // shows up in summary_large_image cards
