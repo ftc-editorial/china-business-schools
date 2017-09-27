@@ -1,5 +1,6 @@
 @import 'o-colors/main';
 @import 'o-grid/main';
+@import 'o-icons/main';
 @import 'components/core/main';
 
 .o-table {
@@ -28,10 +29,26 @@
   margin: 0 0 28px 0;
 }
 
+.scroll {
+  text-align: right;
+  font-weight: 600;
+  color: #33302e;
+
+  .icon-arrow-right {
+    @include oIconsGetIcon('arrow-right', #33302e, 18);
+    vertical-align: text-top;
+  }
+}
+
+
 @include oGridRespondTo(S) {
   .o-table {
     .o-table__caption--top {
       display: table-caption;
     }
+  }
+
+  .show-mobile {
+    display: none;
   }
 }
