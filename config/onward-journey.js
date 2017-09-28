@@ -9,6 +9,6 @@
 
 export default () => ({
   relatedContent: [
-    { rows: 2, list: 'thing/0c9a33dd-55db-4cd2-ab9a-ce287ed82172' },
+    { rows: 2, list: 'thing/6cf9ea46-a2a5-11e7-b797-b61809486fe2' },
   ],
 });
