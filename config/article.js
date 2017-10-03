@@ -11,7 +11,7 @@ export default () => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: new Date('2017-09-28T00:00:00Z'),
 
-  headline: 'Business schools in China, Hong Kong and Taiwan',
+  headline: 'Interactive: Business schools in China, Hong Kong and Taiwan',
 
   // summary === standfirst (Summary is what the content API calls it)
   summary: 'Compare starting salaries and other important data supplied by top schools in the region',
