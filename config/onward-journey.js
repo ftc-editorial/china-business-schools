@@ -7,7 +7,7 @@
 // World: 'thing/d8009323-f898-3207-b543-eab4427b7a77'
 // UK: 'thing/98815f9a-0c35-3824-98fb-f134965f56b7'
 
-export default () => ({
+export default (environment = 'development') => ({ // eslint-disable-line
   relatedContent: [
     { rows: 2, list: 'thing/0c9a33dd-55db-4cd2-ab9a-ce287ed82172' },
   ],
