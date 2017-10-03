@@ -1,4 +1,4 @@
-export default () => ({ // eslint-disable-line
+export default (environment = 'development') => ({ // eslint-disable-line
 
   // link file UUID
   id: '4cb88d88-8814-11e7-bf50-e1c239b45787',
