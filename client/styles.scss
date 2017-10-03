@@ -6,6 +6,10 @@
 .o-table {
   margin-bottom: 28px;
 
+  &.china {
+    margin-bottom: 8px;
+  }
+
   .o-table__caption--top {
     display: none;
   }
@@ -38,6 +42,10 @@
     @include oIconsGetIcon('arrow-right', #33302e, 18);
     vertical-align: text-top;
   }
+}
+
+.o-typography-footer.china {
+  margin-bottom: 28px;
 }
 
 
