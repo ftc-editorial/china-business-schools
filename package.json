@@ -81,6 +81,7 @@
     "start": "webpack-dev-server --watch"
   },
   "dependencies": {
-    "d3-format": "^1.2.0"
+    "d3-format": "^1.2.0",
+    "write-json-file": "^2.3.0"
   }
 }
