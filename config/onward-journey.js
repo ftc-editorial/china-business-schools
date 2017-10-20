@@ -9,6 +9,42 @@
 
 export default (environment = 'development') => ({ // eslint-disable-line
   relatedContent: [
-    { rows: 2, list: 'thing/0c9a33dd-55db-4cd2-ab9a-ce287ed82172' },
+    // { rows: 2, list: 'thing/0c9a33dd-55db-4cd2-ab9a-ce287ed82172' },
+    {
+      image: "",
+      title: "",
+      link: "",
+      datetime: ""
+    },
+    {
+      image: "",
+      title: "",
+      link: "",
+      datetime: ""
+    },
+    {
+      image: "",
+      title: "",
+      link: "",
+      datetime: ""
+    },
+    {
+      image: "",
+      title: "",
+      link: "",
+      datetime: ""
+    },
+    {
+      image: "",
+      title: "",
+      link: "",
+      datetime: ""
+    },
+    {
+      image: "",
+      title: "",
+      link: "",
+      datetime: ""
+    },
   ],
 });

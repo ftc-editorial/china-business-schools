@@ -1,8 +1,34 @@
+{#
 {% for section in onwardJourney.relatedContent %}
 {% if loop.first %}<aside class="onward-journey__block">{% endif %}
   <section class="onward-journey__section" data-g-component="onward-journey" data-list="{{ section.list | safe }}" data-rows="{{ section.rows | default('1', true) }}"></section>
 {% if loop.last %}</aside>{% endif %}
 {% endfor %}
+#}
+
+<aside class="onward-journey__block">
+  <section class="onward-journey__section">
+    <div class="o-grid-container onward-journey">
+      <div class="o-grid-row">
+        {% for card in onwardJourney.relatedContent %}
+        <div data-o-grid-colspan="12 S6 M4 XL3">
+          <div class="o-card o-card--image" data-o-component="o-card">
+            <div class="o-card__content">
+              <div class="o-card__meta"></div>
+              <h2 class="o-card__heading o-card__heading--small"><a href="{{card.link}}">{{card.title}}</a></h2>
+              <time datetime="" class="o-card__timestamp o-date">{{card.datetime}}</time>
+            </div>
+            <div class="o-card__image">
+              <img src="{{card.image}}" alt=""/>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</aside>
+
 <style>
 .o-card {
   background-color: #fff1e5;
@@ -135,27 +161,27 @@
 
 </style>
 <script>
-(function(){
-  [].forEach.call(document.querySelectorAll('[data-g-component="onward-journey"]'), function (tag) {
-    if (!tag.classList.contains('is-rendered')) {
-      var list = tag.getAttribute('data-list');
-      var layout = tag.getAttribute('data-layout') || '';
-      var limit = parseInt(tag.getAttribute('data-rows') || '1') * 4;
-      var urlBase = 'https://ig.ft.com/onwardjourney/v2/';
-      var url = [urlBase, list, '/html/', layout, '?limit=', limit].join('');
-      if (list) {
-        fetch(url)
-        .then(function(res) { return res.text() })
-        .then(function(html) {
-          tag.innerHTML = html;
-        })
-        .catch(function(){
-          tag.remove();
-        });
-      }
-    }
+// (function(){
+//   [].forEach.call(document.querySelectorAll('[data-g-component="onward-journey"]'), function (tag) {
+//     if (!tag.classList.contains('is-rendered')) {
+//       var list = tag.getAttribute('data-list');
+//       var layout = tag.getAttribute('data-layout') || '';
+//       var limit = parseInt(tag.getAttribute('data-rows') || '1') * 4;
+//       var urlBase = 'https://ig.ft.com/onwardjourney/v2/';
+//       var url = [urlBase, list, '/html/', layout, '?limit=', limit].join('');
+//       if (list) {
+//         fetch(url)
+//         .then(function(res) { return res.text() })
+//         .then(function(html) {
+//           tag.innerHTML = html;
+//         })
+//         .catch(function(){
+//           tag.remove();
+//         });
+//       }
+//     }
 
-    tag.classList.add('is-rendered');
-  });
-}());
+//     tag.classList.add('is-rendered');
+//   });
+// }());
 </script>

@@ -90,7 +90,7 @@ module.exports = async (env = 'development') => ({
             loader: 'nunjucks-html-loader',
             options: {
               searchPaths: [
-                resolve(__dirname, 'views'),
+                resolve(__dirname, 'views')
               ],
               filters: nunjucksFilters,
               context: await getContext(env),

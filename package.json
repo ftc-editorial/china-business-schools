@@ -61,7 +61,8 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.3.0",
-    "webpack-dev-server": "^2.5.1"
+    "webpack-dev-server": "^2.5.1",
+    "write-json-file": "^2.3.0"
   },
   "engines": {
     "node": ">=8",
@@ -81,7 +82,6 @@
     "start": "webpack-dev-server --watch"
   },
   "dependencies": {
-    "d3-format": "^1.2.0",
-    "write-json-file": "^2.3.0"
+    "d3-format": "^1.2.0"
   }
 }
