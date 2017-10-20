@@ -7,6 +7,8 @@
 
 注意，HTML文件中的`{% %}`和`{{ }}`标签不要动。
 
+`npm start` 开始预览
+
 # Business schools in China, Hong Kong and Taiwan
 
 A listings page about [business schools in China, Hong Kong and Taiwan](https://ig.ft.com/greater-china-business-schools/).
