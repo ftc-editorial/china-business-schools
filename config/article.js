@@ -9,27 +9,27 @@ export default (environment = 'development') => ({ // eslint-disable-line
 
   // To set an exact publish date do this:
   //       new Date('2016-05-17T17:11:22Z')
-  publishedDate: new Date('2017-09-28T00:00:00Z'),
+  publishedDate: '2017年11月10日',
 
-  headline: 'Interactive: Business schools in China, Hong Kong and Taiwan',
+  headline: '互动表格：两岸三地商学院',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: 'Compare starting salaries and other important data supplied by top schools in the region',
+  summary: '比较两岸三地顶尖商学院的毕业生起薪及其他重要指标。',
 
   topic: {
-    name: 'Educating the next Chinese business leaders',
-    url: 'http://www.ft.com/reports/educating-next-chinese-business-leaders',
+    name: 'FT商学院',
+    url: 'http://www.ftchinese.com/tag/%E6%95%99%E8%82%B2',
   },
 
   relatedArticle: {
-    text: 'Related article »',
-    url: 'https://www.ft.com/content/1451d662-5da7-11e7-b553-e2df1b0c3220',
+    text: '延伸阅读 »',
+    url: 'http://www.ftchinese.com/story/001074512',
   },
 
   mainImage: {
     title: '',
     description: '',
-    credit: 'FT graphic: Kari-Ruth Pedersen',
+    credit: '图片设计: Kari-Ruth Pedersen',
 
     // You can provide a UUID to an image and it was populate everything else
     uuid: '25439648-9e27-11e7-8cd4-932067fbf946',
@@ -46,10 +46,10 @@ export default (environment = 'development') => ({ // eslint-disable-line
   ],
 
   // Appears in the HTML <title>
-  title: 'Business schools in China, Hong Kong and Taiwan',
+  title: '互动表格：两岸三地商学院',
 
   // meta data
-  description: 'Compare starting salaries and other important data supplied by top schools in the region',
+  description: '通过学校提供的信息，比较两岸三地商学院的毕业生起薪以及其他重要指标。',
 
   /*
   TODO: Select Twitter card type -
@@ -66,8 +66,8 @@ export default (environment = 'development') => ({ // eslint-disable-line
  //
  // General social
   socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A25439648-9e27-11e7-8cd4-932067fbf946?source=ig&width=1400',
-  socialHeadline: 'Listing of Chinese business schools',
-  socialDescription: 'Are you interested in the future of Chinese economies? Find out more about the business schools educating the region’s leaders of tomorrow.',
+  socialHeadline: '两岸三地商学院',
+  socialDescription: '比较两岸三地商学院的毕业生起薪以及其他重要指标，找出下一代商业领袖的教育摇篮。',
  //  // twitterCreator: '@someone', // shows up in summary_large_image cards
  //
  //  */

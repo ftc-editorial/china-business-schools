@@ -31,10 +31,10 @@
   <time data-o-component="o-date" class="o-date o-typography-timestamp" datetime="{{ publishedDate | isotime }}">{{ publishedDate | ftdate }}</time>
   {%- endif -%}
   {%- if byline -%}
-  &#32;<div class="o-typography-author"><span>by</span>&nbsp;
+  &#32;<div class="o-typography-author"><span>英国《金融时报》</span>&nbsp;
   {%- if byline.push -%}
     {%- for author in byline -%}
-      <span>{{ " and " if not loop.first and loop.last else (", " if not loop.first else "") }}</span>
+      <span>{{ " , " if not loop.first and loop.last else (", " if not loop.first else "") }}</span>
       {%- if author.url -%}
         <a href="{{ author.url }}" itemprop="author">{{ author.name }}</a>
       {%- else -%}

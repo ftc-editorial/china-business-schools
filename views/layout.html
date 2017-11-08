@@ -1,7 +1,7 @@
 <!doctype html>
 {% set test_comments_uuid = "3a499586-b2e0-11e4-a058-00144feab7de" if not flags.prod and flags.comments else "" %}
 {% import "./macros.html" as macros %}
-<html lang="en-GB" class="core"
+<html lang="zh-cn" class="core"
     data-buildtime="{{ now() | isotime }}"
     data-content-id="{{ id if id else test_comments_uuid }}">
   <head>
@@ -45,21 +45,21 @@
 
             <div class="o-grid-row">
               <div data-o-grid-colspan="12">
-                <h2 class="show-mobile">China</h2>
+                <h2 class="show-mobile">中国</h2>
                 <div class="scroll show-mobile">Scroll<i class="icon-arrow-right"></i></div>
                 <table class="o-table o-table--row-stripes o-table--responsive-scroll o-table--compact china" data-o-component="o-table">
                   <caption class="o-table__caption--top">
-                    Business schools in mainland China
+                    中国商学院
                   </caption>
                   <thead>
-                    <th>School</th>
-                    <th>Programme</th>
-                    <th>Category</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Tuition fee (Rmb)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Enrolled students</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">International students (%)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Female students (%)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Starting salary (US$)</th>
+                    <th>学校</th>
+                    <th>项目</th>
+                    <th>学位别</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">学费(Rmb)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">注册人数</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">国际学生占比(%)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">女性学生占比(%)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">毕业起薪(美元)</th>
                   </thead>
                   <tbody>
                     {% for row in dataChina %}
@@ -82,28 +82,28 @@
             <div class="o-grid-row">
               <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
                 <footer class="o-typography-footer china">
-                  The data in this table were updated on October 3, 2017 to incorporate new information from Xi'an Jiaotong Liverpool University.
+                  表格数据于2017年10月3日更新，包含西交利物浦大学的最新信息。
                 </footer>
               </div>
             </div>
 
             <div class="o-grid-row">
               <div data-o-grid-colspan="12">
-                <h2 class="show-mobile">Hong Kong</h2>
+                <h2 class="show-mobile">香港</h2>
                 <div class="scroll show-mobile">Scroll<i class="icon-arrow-right"></i></div>
                 <table class="o-table o-table--row-stripes o-table--responsive-scroll o-table--compact" data-o-component="o-table">
                   <caption class="o-table__caption--top">
-                    Business schools in Hong Kong
+                    香港商学院
                   </caption>
                   <thead>
-                    <th>School</th>
-                    <th>Programme</th>
-                    <th>Category</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Tuition fee (HK$)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Enrolled students</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">International students (%)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Female students (%)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Starting salary (US$)</th>
+                    <th>学校</th>
+                    <th>学院</th>
+                    <th>学位别</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">学费(港币)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">注册学生</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">国际学生(%)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">女性学生(%)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">毕业起薪(美元)</th>
                   </thead>
                   <tbody>
                     {% for row in dataHk %}
@@ -125,21 +125,21 @@
 
             <div class="o-grid-row">
               <div data-o-grid-colspan="12">
-                <h2 class="show-mobile">Taiwan</h2>
+                <h2 class="show-mobile">台湾</h2>
                 <div class="scroll show-mobile">Scroll<i class="icon-arrow-right"></i></div>
                 <table class="o-table o-table--row-stripes o-table--responsive-scroll o-table--compact" data-o-component="o-table">
                   <caption class="o-table__caption--top">
-                    Business schools in Taiwan
+                    台湾商学院
                   </caption>
                   <thead>
-                    <th>School</th>
-                    <th>Programme</th>
-                    <th>Category</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Tuition fee (NT$)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Enrolled students</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">International students (%)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Female students (%)</th>
-                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">Starting salary (US$)</th>
+                    <th>学校</th>
+                    <th>项目</th>
+                    <th>学位别</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">学费(新台币)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">注册学生</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">国际学生(%)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">女性学生(%)</th>
+                    <th data-o-table-data-type="numeric" class="o-table__cell--numeric">毕业生起薪(美元)</th>
                   </thead>
                   <tbody>
                     {% for row in dataTaiwan %}
@@ -161,31 +161,31 @@
 
             <div class="o-grid-row">
               <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
-                <h2 id="footnotes">Footnotes</h2>
+                <h2 id="footnotes">注</h2>
                 <table class="o-table o-table--compact" data-o-component="o-table">
                   <tr>
-                    <td><strong>Category</strong></td>
-                    <td>The type of qualification conferred by the programme.</td>
+                    <td><strong>学位别</strong></td>
+                    <td>该项目提供的学位类别。</td>
                   </tr>
                   <tr>
-                    <td><strong>Tuition fee</strong></td>
-                    <td>Fee for entire programme in local currency.</td>
+                    <td><strong>学费</strong></td>
+                    <td>项目完整费用（采当地货币计算）。</td>
                   </tr>
                   <tr>
-                    <td><strong>Enrolled students</strong></td>
-                    <td>Number of students enrolled in 2016.</td>
+                    <td><strong>注册学生</strong></td>
+                    <td>2016年注册学生人数。</td>
                   </tr>
                   <tr>
-                    <td><strong>International students</strong></td>
-                    <td>Proportion of international students enrolled in 2016.</td>
+                    <td><strong>国际学生</strong></td>
+                    <td>国际学生占2016年注册学生的比例。</td>
                   </tr>
                   <tr>
-                    <td><strong>Female students</strong></td>
-                    <td>Proportion of female students enrolled in 2016.</td>
+                    <td><strong>女性学生</strong></td>
+                    <td>女性占2016年注册学生的比例。</td>
                   </tr>
                   <tr>
-                    <td><strong>Starting salary</strong></td>
-                    <td>Average starting salary upon graduation for 2016 cohort (PPP-adjusted US$).</td>
+                    <td><strong>毕业起薪</strong></td>
+                    <td>2016年毕业生的平均起薪（经购买力平价调整，单位：美元）</td>
                   </tr>
                 </table>
               </div>
@@ -197,7 +197,7 @@
               <div class="o-grid-row">
                 <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
                   <small><a href="http://www.ft.com/servicestools/help/copyright" data-trackable="link-copyright">Copyright</a>
-                   <span itemprop="name">The Financial Times</span> Limited {{ now() | strftime('%Y') }}. All rights reserved. You may share using our article tools. Please don't cut articles from FT.com and redistribute by email or post to the web.</small>
+                   <span itemprop="name">The Financial Times 2017</span> Limited {{ now() | strftime('%Y') }}. FT and Financial Times are trademarks of The Financial Times Ltd.</small>
                 </div>
               </div>
             </div>
