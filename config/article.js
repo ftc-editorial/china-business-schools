@@ -68,6 +68,12 @@ export default (environment = 'development') => ({ // eslint-disable-line
   socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A25439648-9e27-11e7-8cd4-932067fbf946?source=ig&width=1400',
   socialHeadline: '两岸三地商学院',
   socialDescription: '比较两岸三地商学院的毕业生起薪以及其他重要指标，找出下一代商业领袖的教育摇篮。',
+
+  share: {
+    url: "http://www.ftchinese.com/interactive/",
+    title: "互动表格：两岸三地商学院",
+    summary: "比较两岸三地商学院的毕业生起薪以及其他重要指标，找出下一代商业领袖的教育摇篮。"
+  },
  //  // twitterCreator: '@someone', // shows up in summary_large_image cards
  //
  //  */
@@ -91,14 +97,14 @@ export default (environment = 'development') => ({ // eslint-disable-line
   // facebookDescription: '',
 
   // ADVERTISING
-  ads: {
-    // Ad unit hierarchy makes ads more granular.
-    gptSite: 'ft.com',
-    // Start with ft.com and /companies /markets /world as appropriate to your story
-    gptZone: '/world/asia-pacific',
-    // granular targeting is optional and will be specified by the ads team
-    dfpTargeting: false,
-  },
+  // ads: {
+  //   // Ad unit hierarchy makes ads more granular.
+  //   gptSite: 'ft.com',
+  //   // Start with ft.com and /companies /markets /world as appropriate to your story
+  //   gptZone: '/world/asia-pacific',
+  //   // granular targeting is optional and will be specified by the ads team
+  //   dfpTargeting: false,
+  // },
 
   tracking: {
 

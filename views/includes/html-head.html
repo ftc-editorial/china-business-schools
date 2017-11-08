@@ -9,7 +9,7 @@
 
 {# Stylesheets #}
 <link rel="stylesheet" href="components/core/top.css">
-<link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-normalise@^1.2.1,o-fonts@^3.0.1,o-grid@^4.3.3,o-typography@^5.2.0,o-header@^7.0.4,o-card@^3.0.0,o-table@^6.2.1,o-icons@^4.0.0{{ ',o-share@^5.0.0' if flags.shareButtons }}{{ ',o-ads@^7.1.0' if flags.ads}}">
+<link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-normalise@^1.2.1,o-fonts@^3.0.1,o-grid@^4.3.3,o-typography@^5.2.0,o-header@^7.0.4,o-card@^3.0.0,o-table@^6.2.1,o-icons@^4.0.0">
 
 {%- if stylesheets %}{% for stylesheet in stylesheets %}
 <link rel="stylesheet" href="{{ stylesheet | safe }}">

@@ -1,20 +1,297 @@
-<div class="article__share article__share--top n-util-clearfix" data-trackable="share | top">
-  <div class="container">
-    <div data-o-component="o-share" class="o-share">
-      <ul>
-        <li class="o-share__action o-share__action--twitter">
-          <a href="https://twitter.com/intent/tweet?url={{ url }}&amp;text={{ tweetText | default(twitterHeadline) | default(socialHeadline) | default(headline) }}{% if twitterRelatedAccounts %}&amp;related={{ twitterRelatedAccounts | join(',') }}{% endif %}&amp;via=FT" rel="noopener"><i>Twitter</i></a>
-        </li>
-        <li class="o-share__action o-share__action--facebook">
-          <a href="http://www.facebook.com/sharer.php?u={{ url }}" rel="noopener"><i>Facebook</i></a>
-        </li>
-        <li class="o-share__action o-share__action--linkedin">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ url }}&amp;source=Financial%20Times" rel="noopener"><i>LinkedIn</i></a>
-        </li>
-        <li class="o-share__action o-share__action--whatsapp">
-          <a target="_blank" href="whatsapp://send?text={{ socialHeadline | default(headline) }}%20-%20{{ url }}" data-trackable="whatsapp" rel="noopener"><i>Whatsapp</i></a>
-        </li>
-      </ul>
-    </div>
+<style type="text/css">.o-share {
+  display: inline-block; }
+  .o-share ul {
+    margin: 0;
+    padding: 0; }
+
+.o-share__action {
+  box-sizing: border-box;
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px 0 0;
+  list-style-type: none;
+  line-height: 40;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  cursor: pointer; }
+  @media (min-width: 30.625em) {
+    .o-share__action {
+      margin-right: 10px; } }
+
+.o-share__icon {
+  display: block;
+  position: relative;
+  top: -1px;
+  left: -1px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent; }
+  .o-share__icon:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 45px;
+    height: 45px;
+    top: -2px;
+    left: -2px; }
+    @media (min-width: 30.625em) {
+      .o-share__icon:after {
+        width: 50px;
+        height: 50px;
+        top: -5px;
+        left: -5px; } }
+
+.o-share__text {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap; }
+
+.o-share__icon--wechat:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fwechat.svg?source=ftchinese&format=svg");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fwechat.svg?source=ftchinese&format=png&width=40") \9;
+  background-size: contain; }
+
+.o-share__icon--wechat .o-share__text {
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fwechat.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fwechat.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share__icon--wechat:hover,
+.o-share__icon--wechat:focus {
+  border-color: #609700;
+  background-color: #609700; }
+  .o-share__icon--wechat:hover:before,
+  .o-share__icon--wechat:focus:before {
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fwechat.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fwechat.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share__icon--weibo:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fweibo.svg?source=ftchinese&format=svg");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fweibo.svg?source=ftchinese&format=png&width=40") \9;
+  background-size: contain; }
+
+.o-share__icon--weibo .o-share__text {
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fweibo.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fweibo.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share__icon--weibo:hover,
+.o-share__icon--weibo:focus {
+  border-color: #e6162d;
+  background-color: #e6162d; }
+  .o-share__icon--weibo:hover:before,
+  .o-share__icon--weibo:focus:before {
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fweibo.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fweibo.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share__icon--linkedin:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Flinkedin.svg?source=ftchinese&format=svg");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Flinkedin.svg?source=ftchinese&format=png&width=40") \9;
+  background-size: contain; }
+
+.o-share__icon--linkedin .o-share__text {
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Flinkedin.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Flinkedin.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share__icon--linkedin:hover,
+.o-share__icon--linkedin:focus {
+  border-color: #0977b6;
+  background-color: #0977b6; }
+  .o-share__icon--linkedin:hover:before,
+  .o-share__icon--linkedin:focus:before {
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Flinkedin.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Flinkedin.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share__icon--facebook:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ffacebook.svg?source=ftchinese&format=svg");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ffacebook.svg?source=ftchinese&format=png&width=40") \9;
+  background-size: contain; }
+
+.o-share__icon--facebook .o-share__text {
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ffacebook.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ffacebook.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share__icon--facebook:hover,
+.o-share__icon--facebook:focus {
+  border-color: #3c5a99;
+  background-color: #3c5a99; }
+  .o-share__icon--facebook:hover:before,
+  .o-share__icon--facebook:focus:before {
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ffacebook.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ffacebook.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share__icon--twitter:before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ftwitter.svg?source=ftchinese&format=svg");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ftwitter.svg?source=ftchinese&format=png&width=40") \9;
+  background-size: contain; }
+
+.o-share__icon--twitter .o-share__text {
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ftwitter.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ftwitter.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share__icon--twitter:hover,
+.o-share__icon--twitter:focus {
+  border-color: #6aa9e0;
+  background-color: #6aa9e0; }
+  .o-share__icon--twitter:hover:before,
+  .o-share__icon--twitter:focus:before {
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ftwitter.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ftwitter.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share--inverse .o-share__action:not(:hover) {
+  border: 1px solid rgba(255, 255, 255, 0.5); }
+
+.o-share--inverse .o-share__icon--wechat {
+  border-color: #609700; }
+  .o-share--inverse .o-share__icon--wechat:before {
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fwechat.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fwechat.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share--inverse .o-share__icon--weibo {
+  border-color: #e6162d; }
+  .o-share--inverse .o-share__icon--weibo:before {
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fweibo.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Fweibo.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share--inverse .o-share__icon--linkedin {
+  border-color: #0977b6; }
+  .o-share--inverse .o-share__icon--linkedin:before {
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Flinkedin.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Flinkedin.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share--inverse .o-share__icon--facebook {
+  border-color: #3c5a99; }
+  .o-share--inverse .o-share__icon--facebook:before {
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ffacebook.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ffacebook.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+
+.o-share--inverse .o-share__icon--twitter {
+  border-color: #6aa9e0; }
+  .o-share--inverse .o-share__icon--twitter:before {
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ftwitter.svg?source=ftchinese&format=svg&tint=%23FFFFFF,%23FFFFFF");
+    background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fsocial-images%2Ftwitter.svg?source=ftchinese&format=png&width=40&tint=%23FFFFFF,%23FFFFFF") \9; }
+</style><div class="container{% if share.inverse %} container--inverse{% endif %}">
+  <div data-o-component="o-share" class="o-share{% if share.inverse %} o-share--inverse{% endif %}">
+    <ul>
+      
+      <li class="o-share__action">
+        <a class="o-share__icon o-share__icon--wechat" href="http://www.ftchinese.com/m/corp/qrshare.html?title={{share.title}}&url={{share.url}}&ccode=2C1A1408" target="_blank" title="分享到微信">
+          <span class="o-share__text">微信</span>
+        </a>
+      </li>
+      
+      <li class="o-share__action">
+        <a class="o-share__icon o-share__icon--weibo" href="http://service.weibo.com/share/share.php?&appkey=4221537403&url={{share.url}}&title=【{{share.title}}】{{share.summary}}&ralateUid=1698233740&source=FT中文网&sourceUrl=http://www.ftchinese.com/&content=utf8&ccode=2G139005" target="_blank" title="分享到微博">
+          <span class="o-share__text">微博</span>
+        </a>
+      </li>
+      
+      <li class="o-share__action">
+        <a class="o-share__icon o-share__icon--linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url={{share.url}}&title={{share.title}}&summary={{share.summary}}&source=FT中文网" target="_blank" title="分享到领英">
+          <span class="o-share__text">领英</span>
+        </a>
+      </li>
+      
+      <li class="o-share__action">
+        <a class="o-share__icon o-share__icon--facebook" href="http://www.facebook.com/sharer.php?u={{share.url}}" target="_blank" title="分享到Facebook">
+          <span class="o-share__text">Facebook</span>
+        </a>
+      </li>
+      
+      <li class="o-share__action">
+        <a class="o-share__icon o-share__icon--twitter" href="https://twitter.com/intent/tweet?url={{share.url}}&amp;text=【{{share.title}}】{{share.summary}}&amp;via=FTChinese" target="_blank" title="分享到Twitter">
+          <span class="o-share__text">Twitter</span>
+        </a>
+      </li>
+      
+    </ul>
   </div>
-</div>
+</div><script>(function () {
+'use strict';
+
+/**
+ * @desc In this version `Share` only handles click event. Previously it dynamically generate all the DOM needed. But I don't think it's a good idea since it's much easy to staticlly build the HTML.
+ * @param {String | HTMLElement} rootEl - required
+ */
+var Share = function Share(rootEl) {
+  if (!rootEl) {
+    rootEl = document.body;
+  } else if (!(rootEl instanceof HTMLElement)) {
+    rootEl = document.querySelector(rootEl);
+  }
+    
+  this.rootEl = rootEl;
+  this.openWindows = {};
+
+  this.rootEl.addEventListener('click', this.handleClick.bind(this));
+  this.rootEl.setAttribute('data-o-share--js', '');
+};
+
+Share.prototype.handleClick = function handleClick (e) {
+  var target = e.target;
+  e.preventDefault();
+  while (!target.classList.contains('o-share__icon')) {
+    target = target.parentNode;
+  }
+  this.shareSocial(target.href);
+};
+
+Share.prototype.shareSocial = function shareSocial (url) {
+  if (url) {
+    if (this.openWindows[url] && !this.openWindows[url].closed) {
+      this.openWindows[url].focus();
+    } else {
+      this.openWindows[url] = window.open(url, '', 'width=646,height=436');
+    }
+  }
+};
+
+Share.init = function init (el) {
+  var shareInstances = [];
+
+  if (!el) {
+    el =document.body;
+  } else if (!el instanceof HTMLElement) {
+    el = document.querySelector(el);
+  }
+
+  var shareElements = el.querySelectorAll('[data-o-component=o-share]');
+
+  for (var i = 0; i < shareElements.length; i++) {
+    shareInstances.push(new Share(shareElements[i]));
+  }
+
+  return shareInstances;
+};
+
+Share.init();
+
+}());
+</script>
