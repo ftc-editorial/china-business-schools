@@ -5,7 +5,7 @@ export default (environment = 'development') => ({ // eslint-disable-line
 
   // canonical URL of the published page
   // "$url" get filled in by the ./configure script
-  url: 'https://ig.ft.com/greater-china-business-schools',
+  url: 'http://www.ftchinese.com/interactive/10571',
 
   // To set an exact publish date do this:
   //       new Date('2016-05-17T17:11:22Z')
@@ -14,7 +14,7 @@ export default (environment = 'development') => ({ // eslint-disable-line
   headline: '互动表格：两岸三地商学院',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: '比较两岸三地顶尖商学院的毕业生起薪及其他重要指标。',
+  summary: '英国《金融时报》首次蒐集两岸三地商学院的数据，比较顶尖商学院的毕业生起薪及其他重要指标。',
 
   topic: {
     name: 'FT商学院',
@@ -46,10 +46,10 @@ export default (environment = 'development') => ({ // eslint-disable-line
   ],
 
   // Appears in the HTML <title>
-  title: '互动表格：两岸三地商学院',
+  title: '互动表格：两岸三地商学院--FT中文网',
 
   // meta data
-  description: '通过学校提供的信息，比较两岸三地商学院的毕业生起薪以及其他重要指标。',
+  description: '英国《金融时报》首次蒐集两岸三地商学院的数据，找出下一代商业领袖的教育摇篮。',
 
   /*
   TODO: Select Twitter card type -
@@ -66,13 +66,13 @@ export default (environment = 'development') => ({ // eslint-disable-line
  //
  // General social
   socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A25439648-9e27-11e7-8cd4-932067fbf946?source=ig&width=1400',
-  socialHeadline: '两岸三地商学院',
-  socialDescription: '比较两岸三地商学院的毕业生起薪以及其他重要指标，找出下一代商业领袖的教育摇篮。',
+  socialHeadline: '两岸三地商学院--FT中文网',
+  socialDescription: '英国《金融时报》首次蒐集两岸三地商学院的数据，找出下一代商业领袖的教育摇篮。',
 
   share: {
-    url: "http://www.ftchinese.com/interactive/",
-    title: "互动表格：两岸三地商学院",
-    summary: "比较两岸三地商学院的毕业生起薪以及其他重要指标，找出下一代商业领袖的教育摇篮。"
+    url: "http://www.ftchinese.com/interactive/10571",
+    title: "互动表格：两岸三地商学院--FT中文网",
+    summary: "英国《金融时报》首次蒐集两岸三地商学院的数据，找出下一代商业领袖的教育摇篮。"
   },
  //  // twitterCreator: '@someone', // shows up in summary_large_image cards
  //
