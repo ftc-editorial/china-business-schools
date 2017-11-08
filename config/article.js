@@ -70,7 +70,7 @@ export default (environment = 'development') => ({ // eslint-disable-line
   socialDescription: '比较两岸三地商学院的毕业生起薪以及其他重要指标，找出下一代商业领袖的教育摇篮。',
 
   share: {
-    url: "http://www.ftchinese.com/interactive/",
+    url: "http://www.ftchinese.com/interactive/10571",
     title: "互动表格：两岸三地商学院",
     summary: "比较两岸三地商学院的毕业生起薪以及其他重要指标，找出下一代商业领袖的教育摇篮。"
   },

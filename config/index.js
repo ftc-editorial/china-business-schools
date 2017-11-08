@@ -9,9 +9,9 @@ export default async (environment = 'development') => {
   const onwardJourney = await getOnwardJourney(environment);
   // const berthaId = '1caGngmG0spk3fYgtfX-LTjaIivHEVgjIinWupr_bhN4';
   const berthaId = '1d-0ADsvOnvB-CnW53gBmcZbVVuqTtCsQZeZtQ_-1TcQ'
-  const endpointChina = `http://bertha.ig.ft.com/view/publish/gss/${berthaId}/china`;
-  const endpointHk = `http://bertha.ig.ft.com/view/publish/gss/${berthaId}/hong-kong`;
-  const endpointTaiwan = `http://bertha.ig.ft.com/view/publish/gss/${berthaId}/taiwan`;
+  const endpointChina = `http://bertha.ig.ft.com/republish/publish/gss/${berthaId}/china`;
+  const endpointHk = `http://bertha.ig.ft.com/republish/publish/gss/${berthaId}/hong-kong`;
+  const endpointTaiwan = `http://bertha.ig.ft.com/republish/publish/gss/${berthaId}/taiwan`;
   let dataChina;
   let dataHk;
   let dataTaiwan;
