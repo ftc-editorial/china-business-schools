@@ -46,7 +46,7 @@ export default (environment = 'development') => ({ // eslint-disable-line
   ],
 
   // Appears in the HTML <title>
-  title: '互动表格：两岸三地商学院--FT中文网',
+  title: '互动表格：两岸三地商学院 —— FT中文网',
 
   // meta data
   description: '英国《金融时报》首次蒐集两岸三地商学院的数据，找出下一代商业领袖的教育摇篮。',
@@ -71,7 +71,7 @@ export default (environment = 'development') => ({ // eslint-disable-line
 
   share: {
     url: "http://www.ftchinese.com/interactive/10571",
-    title: "互动表格：两岸三地商学院--FT中文网",
+    title: "互动表格：两岸三地商学院 —— FT中文网",
     summary: "英国《金融时报》首次蒐集两岸三地商学院的数据，找出下一代商业领袖的教育摇篮。"
   },
  //  // twitterCreator: '@someone', // shows up in summary_large_image cards
