@@ -11,10 +11,10 @@ export default (environment = 'development') => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: '2017年11月10日',
 
-  headline: '互动表格：两岸三地商学院',
+  headline: '互动表格：2017年度两岸三地商学院',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: '英国《金融时报》首次蒐集两岸三地商学院的数据，比较顶尖商学院的毕业生起薪及其他重要指标。',
+  summary: '英国《金融时报》首次蒐集两岸三地顶尖商学院的数据，比较毕业生起薪及其他重要指标。',
 
   topic: {
     name: 'FT商学院',
@@ -46,7 +46,7 @@ export default (environment = 'development') => ({ // eslint-disable-line
   ],
 
   // Appears in the HTML <title>
-  title: '互动表格：两岸三地商学院 —— FT中文网',
+  title: '互动表格：2017年度两岸三地商学院 — FT中文网',
 
   // meta data
   description: '英国《金融时报》首次蒐集两岸三地商学院的数据，找出下一代商业领袖的教育摇篮。',
@@ -66,13 +66,13 @@ export default (environment = 'development') => ({ // eslint-disable-line
  //
  // General social
   socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A25439648-9e27-11e7-8cd4-932067fbf946?source=ig&width=1400',
-  socialHeadline: '两岸三地商学院--FT中文网',
-  socialDescription: '英国《金融时报》首次蒐集两岸三地商学院的数据，找出下一代商业领袖的教育摇篮。',
+  socialHeadline: '两岸三地商学院 — FT中文网',
+  socialDescription: '英国《金融时报》首次蒐集两岸三地顶尖商学院的数据，找出下一代商业领袖的教育摇篮。',
 
   share: {
     url: "http://www.ftchinese.com/interactive/10571",
-    title: "互动表格：两岸三地商学院 —— FT中文网",
-    summary: "英国《金融时报》首次蒐集两岸三地商学院的数据，找出下一代商业领袖的教育摇篮。"
+    title: "互动表格：两岸三地商学院 — FT中文网",
+    summary: "英国《金融时报》首次蒐集两岸三地顶尖商学院的数据，找出下一代商业领袖的教育摇篮。"
   },
  //  // twitterCreator: '@someone', // shows up in summary_large_image cards
  //
