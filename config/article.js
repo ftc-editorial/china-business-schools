@@ -11,10 +11,10 @@ export default (environment = 'development') => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: '2017年11月10日',
 
-  headline: '互动表格：2017年度两岸三地商学院',
+  headline: '互动图表：2017年度两岸三地商学院',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: '英国《金融时报》首次蒐集两岸三地顶尖商学院的数据，比较毕业生起薪及其他重要指标。',
+  summary: '英国《金融时报》首次收集两岸三地顶尖商学院的数据，比较毕业生起薪及其他重要指标。',
 
   topic: {
     name: 'FT商学院',
@@ -29,13 +29,13 @@ export default (environment = 'development') => ({ // eslint-disable-line
   mainImage: {
     title: '',
     description: '',
-    credit: '图片设计: Kari-Ruth Pedersen',
+    credit: '',
 
     // You can provide a UUID to an image and it was populate everything else
-    uuid: '25439648-9e27-11e7-8cd4-932067fbf946',
+    //uuid: '25439648-9e27-11e7-8cd4-932067fbf946',
 
     // You can also provide a URL
-    // url: 'https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fcom.ft.imagepublish.prod.s3.amazonaws.com%2Fc4bf0be4-7c15-11e4-a7b8-00144feabdc0?source=ig&fit=scale-down&width=700',
+     url: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F0%2F000065220_piclink.jpg?source=ftchinese&width=670&height=377&fit=cover',
   },
 
   // Byline can by a plain string, markdown, or array of authors
@@ -46,10 +46,10 @@ export default (environment = 'development') => ({ // eslint-disable-line
   ],
 
   // Appears in the HTML <title>
-  title: '互动表格：2017年度两岸三地商学院 — FT中文网',
+  title: '互动图表：2017年度两岸三地商学院 — FT中文网',
 
   // meta data
-  description: '英国《金融时报》首次蒐集两岸三地商学院的数据，找出下一代商业领袖的教育摇篮。',
+  description: '英国《金融时报》首次收集两岸三地商学院的数据，找出下一代商业领袖的教育摇篮。',
 
   /*
   TODO: Select Twitter card type -
@@ -67,12 +67,12 @@ export default (environment = 'development') => ({ // eslint-disable-line
  // General social
   socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A25439648-9e27-11e7-8cd4-932067fbf946?source=ig&width=1400',
   socialHeadline: '2017年度两岸三地商学院 — FT中文网',
-  socialDescription: '英国《金融时报》首次蒐集两岸三地顶尖商学院的数据，找出下一代商业领袖的教育摇篮。',
+  socialDescription: '英国《金融时报》首次收集两岸三地顶尖商学院的数据，找出下一代商业领袖的教育摇篮。',
 
   share: {
     url: "http://www.ftchinese.com/interactive/10571",
-    title: "互动表格：2017年度两岸三地商学院 — FT中文网",
-    summary: "英国《金融时报》首次蒐集两岸三地顶尖商学院的数据，找出下一代商业领袖的教育摇篮。"
+    title: "互动图表：2017年度两岸三地商学院 — FT中文网",
+    summary: "英国《金融时报》首次收集两岸三地顶尖商学院的数据，找出下一代商业领袖的教育摇篮。"
   },
  //  // twitterCreator: '@someone', // shows up in summary_large_image cards
  //
